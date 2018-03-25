@@ -672,7 +672,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "html {\n  width: 100%;\n  height: 100%; }\n  html body {\n    width: 100%;\n    height: 100%; }\n", ""]);
+exports.push([module.i, "html {\n  width: 100%;\n  height: 100%; }\n  html body {\n    width: 100%;\n    height: 100%; }\n    html body form .formField label {\n      font-weight: bold;\n      font-size: 17px;\n      margin-top: 5px;\n      display: block; }\n    html body form .formField input {\n      margin: 5px 0;\n      width: 100%; }\n", ""]);
 
 // exports
 
