@@ -11,11 +11,13 @@ html {
                     font-weight: bold;
                     font-size: 17px;
                     margin-top: 5px;
+                    margin-bottom: 0px;
                     display: block
                 }
 
-                input {
-                    margin: 5px 0;
+                textarea,input {
+                    margin-bottom: 5px;
+                    margin-top: 0px;
                     width: 100%;
                 }
             }
