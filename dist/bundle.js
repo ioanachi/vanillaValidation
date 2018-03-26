@@ -468,7 +468,7 @@ __webpack_require__(15);
 /* 5 */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\r\n<html>\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title>Form Validation</title>\r\n</head>\r\n\r\n<body>\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n\r\n        <form name=\"myForm\">\r\n          <div class=\"formField\">\r\n            <label for=\"name\">Name:</label>\r\n            <input type=\"text\" class=\"formInput\" id=\"name\" name=\"name\" required>\r\n            <span id=\"error_name\"></span>\r\n          </div>\r\n          <div class=\"formField\">\r\n            <label for=\"name\">Username:</label>\r\n            <input type=\"text\" class=\"formInput\" id=\"username\" required>\r\n          </div>\r\n\r\n          <div class=\"formField\">\r\n            <label for=\"email\">Email address:</label>\r\n            <input type=\"email\" class=\"formInput\" id=\"email\" required> \r\n          </div>\r\n\r\n          <div class=\"formField\">\r\n            <label for=\"pwd\">Password:</label>\r\n            <input type=\"password\" class=\"formInput\" id=\"pwd1\">\r\n          </div>\r\n          <div class=\"formField\">\r\n            <label for=\"pwd\">Password Verification:</label>\r\n            <input type=\"password\" class=\"formInput\" id=\"pwd2\">\r\n          </div>\r\n          <div class=\"formField\">\r\n            <label for=\"description\">Description:</label>\r\n            <textarea rows=\"4\" cols=\"50\" class=\"formInput\" id=\"description\" required></textarea>\r\n          </div>\r\n          <label for=\"socialWorkStatus\">Sex: </label>\r\n\r\n          <div class=\"checkbox\">\r\n            <label>\r\n              <input type=\"checkbox\"> Female</label>\r\n          </div>\r\n          <div class=\"checkbox\">\r\n            <label>\r\n              <input type=\"checkbox\"> Male</label>\r\n          </div>\r\n\r\n          <label for=\"socialWorkStatus\">Work and social status: </label>\r\n          <div class=\"checkbox\">\r\n              <label>\r\n                <input type=\"checkbox\"> Unemployed</label>\r\n            </div>\r\n            <div class=\"checkbox\">\r\n                <label>\r\n                  <input type=\"checkbox\"> Employed</label>\r\n              </div>\r\n            <div class=\"checkbox\">\r\n              <label>\r\n                <input type=\"checkbox\"> Looking for work</label>\r\n            </div>\r\n           \r\n              <div class=\"checkbox\">\r\n                <label>\r\n                  <input type=\"checkbox\"> Living with my mother</label>\r\n              </div>\r\n              <div class=\"checkbox\">\r\n                  <label>\r\n                    <input type=\"checkbox\"> Couch potato</label>\r\n                </div>\r\n                <div class=\"checkbox\">\r\n                    <label>\r\n                      <input type=\"checkbox\"> Employed for a short period</label>\r\n                  </div>\r\n                <div class=\"checkbox\">\r\n                  <label>\r\n                    <input type=\"checkbox\">Employed for a long time</label>\r\n                </div>\r\n               \r\n                  <div class=\"checkbox\">\r\n                    <label>\r\n                      <input type=\"checkbox\">Self employed</label>\r\n                  </div>\r\n\r\n          <button type=\"submit\" class=\"btn btn-default\" id=\"submitBtn\">Submit</button>\r\n        </form>\r\n\r\n\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <script src=\"dist/commons.js \"></script>\r\n  <script src='dist/bundle.js'>\r\n  </script>\r\n</body>\r\n\r\n</html>";
+module.exports = "<!DOCTYPE html>\r\n<html>\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title>Form Validation</title>\r\n</head>\r\n\r\n<body>\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n\r\n        <form name=\"myForm\">\r\n          <div class=\"formField\">\r\n            <label for=\"name\">Name:</label>\r\n            <input type=\"text\" class=\"formInput\" id=\"name\" name=\"name\" >\r\n            <span  id=\"error_name\">This field is required</span>\r\n          </div>\r\n          <div class=\"formField\">\r\n            <label for=\"name\">Username:</label>\r\n            <input type=\"text\" class=\"formInput\" id=\"username\" name=\"username\">\r\n            <span  id=\"error_username\">This field is required</span>\r\n            \r\n          </div>\r\n\r\n          <div class=\"formField\">\r\n            <label for=\"email\">Email address:</label>\r\n            <input type=\"email\" class=\"formInput\" id=\"email\" name=\"mail\"> \r\n            <span id=\"error_mail\">This field is required</span>\r\n            \r\n          </div>\r\n\r\n          <div class=\"formField\">\r\n            <label for=\"pwd\">Password:</label>\r\n            <input type=\"password\" class=\"formInput\" id=\"pwd1\">\r\n          </div>\r\n          <div class=\"formField\">\r\n            <label for=\"pwd\">Password Verification:</label>\r\n            <input type=\"password\" class=\"formInput\" id=\"pwd2\">\r\n          </div>\r\n          <div class=\"formField\">\r\n            <label for=\"description\">Description:</label>\r\n            <textarea rows=\"4\" cols=\"50\" class=\"formInput\" id=\"description\" name=\"description\"></textarea>\r\n            <span id=\"error_description\">This field is required</span>\r\n            \r\n          </div>\r\n          <label for=\"socialWorkStatus\">Gender: </label>\r\n\r\n          <div class=\"checkbox\">\r\n            <label>\r\n              <input type=\"checkbox\"> Female</label>\r\n          </div>\r\n          <div class=\"checkbox\">\r\n            <label>\r\n              <input type=\"checkbox\"> Male</label>\r\n          </div>\r\n\r\n          <label for=\"socialWorkStatus\">Work and social status: </label>\r\n          <div class=\"checkbox\">\r\n              <label>\r\n                <input type=\"checkbox\"> Unemployed</label>\r\n            </div>\r\n            <div class=\"checkbox\">\r\n                <label>\r\n                  <input type=\"checkbox\"> Employed</label>\r\n              </div>\r\n            <div class=\"checkbox\">\r\n              <label>\r\n                <input type=\"checkbox\"> Looking for work</label>\r\n            </div>\r\n           \r\n              <div class=\"checkbox\">\r\n                <label>\r\n                  <input type=\"checkbox\"> Living with my mother</label>\r\n              </div>\r\n              <div class=\"checkbox\">\r\n                  <label>\r\n                    <input type=\"checkbox\"> Couch potato</label>\r\n                </div>\r\n                <div class=\"checkbox\">\r\n                    <label>\r\n                      <input type=\"checkbox\"> Employed for a short period</label>\r\n                  </div>\r\n                <div class=\"checkbox\">\r\n                  <label>\r\n                    <input type=\"checkbox\">Employed for a long time</label>\r\n                </div>\r\n               \r\n                  <div class=\"checkbox\">\r\n                    <label>\r\n                      <input type=\"checkbox\">Self employed</label>\r\n                  </div>\r\n\r\n          <button type=\"submit\"  class=\"btn btn-default\" id=\"submitBtn\">Submit</button>\r\n        </form>\r\n\r\n\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <script src=\"dist/commons.js \"></script>\r\n  <script src='dist/bundle.js'>\r\n  </script>\r\n</body>\r\n\r\n</html>";
 
 /***/ }),
 /* 6 */
@@ -672,7 +672,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "html {\n  width: 100%;\n  height: 100%; }\n  html body {\n    width: 100%;\n    height: 100%; }\n    html body form .formField label {\n      font-weight: bold;\n      font-size: 17px;\n      margin-top: 5px;\n      margin-bottom: 0px;\n      display: block; }\n    html body form .formField textarea, html body form .formField input {\n      margin-bottom: 5px;\n      margin-top: 0px;\n      width: 100%; }\n", ""]);
+exports.push([module.i, "html {\n  width: 100%;\n  height: 100%; }\n  html body {\n    width: 100%;\n    height: 100%; }\n    html body form .formField label {\n      font-weight: bold;\n      font-size: 17px;\n      margin-top: 5px;\n      margin-bottom: 0px;\n      display: block; }\n    html body form .formField textarea, html body form .formField input {\n      margin-bottom: 5px;\n      margin-top: 0px;\n      width: 100%; }\n    html body form span {\n      visibility: hidden; }\n", ""]);
 
 // exports
 
@@ -688,10 +688,39 @@ __webpack_require__(16);
 
 /***/ }),
 /* 16 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-throw new Error("Module build failed: SyntaxError: C:/Users/Ioana/Documents/work/vanillaValidation/src/js/mainContainer.js: Unexpected token (9:3)\n\n\u001b[0m \u001b[90m  7 | \u001b[39m    console\u001b[33m.\u001b[39mlog(nameField\u001b[33m.\u001b[39mvalue)\u001b[33m;\u001b[39m\n \u001b[90m  8 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 | \u001b[39m\u001b[36mif\u001b[39m(){\n \u001b[90m    | \u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 | \u001b[39m\n \u001b[90m 11 | \u001b[39m}\n \u001b[90m 12 | \u001b[39m})\u001b[0m\n");
+
+
+function formValidation() {
+    var nameField = document.myForm.name;
+    var usernameField = document.myForm.username;
+    var mailField = document.myForm.mail;
+    var descriptionField = document.myForm.description;
+
+    function verifyInput(param, spanId) {
+        if (param == "") {
+            document.getElementById(spanId).style.visibility = "visible";
+            document.getElementById(spanId).style.color = "red";
+        }
+    }
+
+    console.log(document.myForm.mail);
+
+    verifyInput(nameField.value, 'error_name');
+    verifyInput(usernameField.value, 'error_username');
+    verifyInput(mailField.value, 'error_mail');
+    verifyInput(descriptionField.value, 'error_description');
+
+    // if (nameField.value == "") {
+    //     nameErrTxt.innerHTML = "This field is required";
+    //         }
+}
+
+var submitBtn = document.getElementById('submitBtn');
+
+submitBtn.addEventListener('click', formValidation());
 
 /***/ })
 ],[3]);
