@@ -14,15 +14,27 @@ html {
                     margin-bottom: 0px;
                     display: block
                 }
-
-                textarea,input {
+                textarea,
+                input {
                     margin-bottom: 5px;
                     margin-top: 0px;
                     width: 100%;
                 }
-             
+                span {
+                    color: red;
+                }
             }
-      
+            #error_gender,
+            #error_status {
+                display: block;
+                color: red;
+                margin-top: 0px;
+                margin-bottom: 5px;
+            }
+            #submitBtn {
+                margin-top: 10px;
+                display: block;
+            }
         }
     }
 }

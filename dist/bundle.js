@@ -468,7 +468,7 @@ __webpack_require__(15);
 /* 5 */
 /***/ (function(module, exports) {
 
-module.exports = "<!DOCTYPE html>\r\n<html>\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title>Form Validation</title>\r\n</head>\r\n\r\n<body>\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n\r\n        <form name=\"myForm\">\r\n          <div class=\"formField\">\r\n            <label for=\"name\">Name:</label>\r\n            <input type=\"text\" class=\"formInput\" id=\"name\" name=\"name\" >\r\n            <span  id=\"error_name\"></span>\r\n          </div>\r\n          <div class=\"formField\">\r\n            <label for=\"name\">Username:</label>\r\n            <input type=\"text\" class=\"formInput\" id=\"username\" name=\"username\">\r\n            <span  id=\"error_username\"></span>\r\n            \r\n          </div>\r\n\r\n          <div class=\"formField\">\r\n            <label for=\"email\">Email address:</label>\r\n            <input type=\"email\" class=\"formInput\" id=\"email\" name=\"mail\"> \r\n            <span id=\"error_mail\"></span>\r\n            \r\n          </div>\r\n\r\n          <div class=\"formField\">\r\n            <label for=\"pwd\">Password:</label>\r\n            <input type=\"password\" class=\"formInput\" id=\"pwd1\">\r\n            <span id=\"error_pwd1\"></span>\r\n            \r\n          </div>\r\n          <div class=\"formField\">\r\n            <label for=\"pwd\">Password Verification:</label>\r\n            <input type=\"password\" class=\"formInput\" id=\"pwd2\">\r\n            <span id=\"error_pwd2\"></span>\r\n            \r\n          </div>\r\n          <div class=\"formField\">\r\n            <label for=\"description\">Description:</label>\r\n            <textarea rows=\"4\" cols=\"50\" class=\"formInput\" id=\"description\" name=\"description\"></textarea>\r\n            <span id=\"error_description\"></span>\r\n            \r\n          </div>\r\n          <label for=\"socialWorkStatus\">Gender: </label>\r\n\r\n          <div class=\"checkbox\">\r\n            <label>\r\n              <input type=\"checkbox\"> Female</label>\r\n          </div>\r\n          <div class=\"checkbox\">\r\n            <label>\r\n              <input type=\"checkbox\"> Male</label>\r\n          </div>\r\n\r\n          <label for=\"socialWorkStatus\">Work and social status: </label>\r\n          <div class=\"checkbox\">\r\n              <label>\r\n                <input type=\"checkbox\"> Unemployed</label>\r\n            </div>\r\n            <div class=\"checkbox\">\r\n                <label>\r\n                  <input type=\"checkbox\"> Employed</label>\r\n              </div>\r\n            <div class=\"checkbox\">\r\n              <label>\r\n                <input type=\"checkbox\"> Looking for work</label>\r\n            </div>\r\n           \r\n              <div class=\"checkbox\">\r\n                <label>\r\n                  <input type=\"checkbox\"> Living with my mother</label>\r\n              </div>\r\n              <div class=\"checkbox\">\r\n                  <label>\r\n                    <input type=\"checkbox\"> Couch potato</label>\r\n                </div>\r\n                <div class=\"checkbox\">\r\n                    <label>\r\n                      <input type=\"checkbox\"> Employed for a short period</label>\r\n                  </div>\r\n                <div class=\"checkbox\">\r\n                  <label>\r\n                    <input type=\"checkbox\">Employed for a long time</label>\r\n                </div>\r\n               \r\n                  <div class=\"checkbox\">\r\n                    <label>\r\n                      <input type=\"checkbox\">Self employed</label>\r\n                  </div>\r\n\r\n          <button type=\"button\"  class=\"btn btn-default\" id=\"submitBtn\">Submit</button>\r\n        </form>\r\n\r\n\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <script src=\"dist/commons.js \"></script>\r\n  <script src='dist/bundle.js'>\r\n  </script>\r\n</body>\r\n\r\n</html>";
+module.exports = "<!DOCTYPE html>\r\n<html>\r\n\r\n<head>\r\n  <meta charset=\"utf-8\">\r\n  <title>Form Validation</title>\r\n</head>\r\n\r\n<body>\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n\r\n        <form name=\"myForm\" id=\"myForm\">\r\n          <div class=\"formField\">\r\n            <label for=\"name\">Name:</label>\r\n            <input type=\"text\" class=\"formInput\" id=\"name\" name=\"name\" >\r\n            <span  id=\"error_name\"></span>\r\n          </div>\r\n          <div class=\"formField\">\r\n            <label for=\"name\">Username:</label>\r\n            <input type=\"text\" class=\"formInput\" id=\"username\" name=\"username\">\r\n            <span  id=\"error_username\"></span>\r\n            \r\n          </div>\r\n\r\n          <div class=\"formField\">\r\n            <label for=\"email\">Email address:</label>\r\n            <input type=\"email\" class=\"formInput\" id=\"email\" name=\"mail\"> \r\n            <span id=\"error_mail\"></span>\r\n            \r\n          </div>\r\n\r\n          <div class=\"formField\">\r\n            <label for=\"pwd\">Password:</label>\r\n            <input type=\"password\" class=\"formInput\" id=\"pwd1\">\r\n            <span id=\"error_pwd1\"></span>\r\n            \r\n          </div>\r\n          <div class=\"formField\">\r\n            <label for=\"pwd\">Password Verification:</label>\r\n            <input type=\"password\" class=\"formInput\" id=\"pwd2\">\r\n            <span id=\"error_pwd2\"></span>\r\n            \r\n          </div>\r\n          <div class=\"formField\">\r\n            <label for=\"description\">Description:</label>\r\n            <textarea rows=\"4\" cols=\"50\" class=\"formInput\" id=\"description\" name=\"description\"></textarea>\r\n            <span id=\"error_description\"></span>\r\n            \r\n          </div>\r\n          <label for=\"socialWorkStatus\">Gender: </label>\r\n\r\n          <div class=\"checkbox\">\r\n            <label>\r\n              <input type=\"checkbox\" name=\"gender\"> Female</label>\r\n          </div>\r\n          <div class=\"checkbox\">\r\n            <label>\r\n              <input type=\"checkbox\" name=\"gender\"> Male</label>\r\n          </div>\r\n          <span id=\"error_gender\"> </span>\r\n          \r\n\r\n          <label for=\"socialWorkStatus\">Work and social status: </label>\r\n          <div class=\"checkbox\">\r\n              <label>\r\n                <input type=\"checkbox\" name=\"status\"> Unemployed</label>\r\n            </div>\r\n            <div class=\"checkbox\">\r\n                <label>\r\n                  <input type=\"checkbox\"  name=\"status\"> Employed</label>\r\n              </div>\r\n            <div class=\"checkbox\">\r\n              <label>\r\n                <input type=\"checkbox\"  name=\"status\"> Looking for work</label>\r\n            </div>\r\n           \r\n              <div class=\"checkbox\">\r\n                <label>\r\n                  <input type=\"checkbox\"  name=\"status\"> Living with my mother</label>\r\n              </div>\r\n              <div class=\"checkbox\">\r\n                  <label>\r\n                    <input type=\"checkbox\"  name=\"status\"> Couch potato</label>\r\n                </div>\r\n                <div class=\"checkbox\">\r\n                    <label>\r\n                      <input type=\"checkbox\"  name=\"status\"> Employed for a short period</label>\r\n                  </div>\r\n                <div class=\"checkbox\">\r\n                  <label>\r\n                    <input type=\"checkbox\" name=\"status\">Employed for a long time</label>\r\n                </div>\r\n               \r\n                  <div class=\"checkbox\">\r\n                    <label>\r\n                      <input type=\"checkbox\" name=\"status\">Self employed</label>\r\n                  </div>\r\n            <span id=\"error_status\"> </span>\r\n                  \r\n\r\n          <button type=\"submit\"   id=\"submitBtn\">Submit</button>\r\n        </form>\r\n\r\n\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <script src=\"dist/commons.js \"></script>\r\n  <script src='dist/bundle.js'>\r\n  </script>\r\n</body>\r\n\r\n</html>";
 
 /***/ }),
 /* 6 */
@@ -672,7 +672,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "html {\n  width: 100%;\n  height: 100%; }\n  html body {\n    width: 100%;\n    height: 100%; }\n    html body form .formField label {\n      font-weight: bold;\n      font-size: 17px;\n      margin-top: 5px;\n      margin-bottom: 0px;\n      display: block; }\n    html body form .formField textarea, html body form .formField input {\n      margin-bottom: 5px;\n      margin-top: 0px;\n      width: 100%; }\n", ""]);
+exports.push([module.i, "html {\n  width: 100%;\n  height: 100%; }\n  html body {\n    width: 100%;\n    height: 100%; }\n    html body form .formField label {\n      font-weight: bold;\n      font-size: 17px;\n      margin-top: 5px;\n      margin-bottom: 0px;\n      display: block; }\n    html body form .formField textarea,\n    html body form .formField input {\n      margin-bottom: 5px;\n      margin-top: 0px;\n      width: 100%; }\n    html body form .formField span {\n      color: red; }\n    html body form #error_gender,\n    html body form #error_status {\n      display: block;\n      color: red;\n      margin-top: 0px;\n      margin-bottom: 5px; }\n    html body form #submitBtn {\n      margin-top: 10px;\n      display: block; }\n", ""]);
 
 // exports
 
@@ -695,49 +695,84 @@ __webpack_require__(16);
 
 function verifyInput(param, spanId) {
     if (param == "") {
-        console.log("intra in if");
 
         document.getElementById(spanId).innerHTML = "This field is required";
-        document.getElementById(spanId).style.color = "red";
+        return false;
     } else {
-        document.getElementById(spanId).innerHTML = "ok";
+        document.getElementById(spanId).innerHTML = " ";
+        return true;
     }
 }
 
-function verifyPassword(pass, spanId) {
-    var pattern1 = /[0-9]/;
-    var pattern2 = /[a-z]/;
-    var pattern3 = /[A-Z]/;
-    var pattern4 = /.*[!@#$%^&*() =+_-]/;
+function verifyPassword(pass, pass2, spanId, spanId2) {
+    var pattern = /(?=(.*[A-Z]){3,})(?=(.*[a-z]){1,})(?=(.*[0-9]){2,})(?=(.*[``!@#$%^&*\-_=+'\/.,]){2}){8,}/;
 
     if (pass == "") {
         document.getElementById(spanId).innerHTML = "You forgot the password";
-    } else if (pass.length < 8) {
-        document.getElementById(spanId).innerHTML = "Password must have minimum 8 characters";
+    } else if (pattern.test(pass) != true) {
+        document.getElementById(spanId).innerHTML = "Password must have a minimum of 8 characters 3 uppercase,1 lowercase, 2 numbers and 3 special characters";
         // The test() method tests for a match in a string.
-    } else if (pattern1.test(pass) != true) {
-        document.getElementById(spanId).innerHTML = "Password must have at least one number";
-    } else if (pattern1.test(pass) != true) {
-        document.getElementById(spanId).innerHTML = "Password must have at least one number";
-    } else if (pattern3.test(pass) != true) {
-        document.getElementById(spanId).innerHTML = "Password must have at least one uppercase letter";
-    } else if (pattern2.test(pass) != true) {
-        document.getElementById(spanId).innerHTML = "Password must have at least one uppercase letter";
-    } else if (pattern4.test(pass) != true) {
-        document.getElementById(spanId).innerHTML = "Password must have at least one special character";
     } else {
-        document.getElementById(spanId).innerHTML = "ok";
-    }
-    if (document.getElementById(spanId).innerHTML != "") {
-        document.getElementById(spanId).style.color = "red";
+        document.getElementById(spanId).innerHTML = " ";
+    };
+
+    if (pass !== pass2) {
+        document.getElementById(spanId2).innerHTML = "Passwords Do Not Match";
+        console.log("intraaaaaa");
+    } else if (pass != "" && pass === pass2) {
+        document.getElementById(spanId2).innerHTML = " ";
+        return true;
+    };
+}
+
+function verifyMail(mail, spanId) {
+    var patternMail = /\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+    if (mail == "") {
+        document.getElementById(spanId).innerHTML = "Email adress is necesarry";
+    } else if (patternMail.test(mail) != true) {
+        document.getElementById(spanId).innerHTML = "Email adress must have a @ and .";
+        return false;
+    } else {
+        document.getElementById(spanId).innerHTML = " ";
+        return true;
     }
 }
-// function verifyMail(mail,spanId ){
+function verifyStatus(statusReference, spanId) {
+    var arr = statusReference['status'];
+    var flag = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (statusReference['status'][i].checked) {
+            flag++;
+        }
+    }
+    if (flag != 1) {
+        document.getElementById(spanId).innerHTML = "You must check one and only one status!";
+        return false;
+    }
+    document.getElementById(spanId).innerHTML = " ";
+    return true;
+};
 
-// }
+function verifyGender(genderBox, spanId) {
+    console.log(genderBox["gender"], "gender['gender']");
+    var arr = genderBox["gender"];
+    var flag = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (genderBox["gender"][i].checked) {
+            flag++;
+        }
+    }
+    if (flag != 1) {
+        document.getElementById(spanId).innerHTML = "You must check one and only one gender!";
+        return false;
+    }
+    document.getElementById(spanId).innerHTML = "";
+    return true;
+};
 
-
-function formValidation() {
+function formValidation(e) {
+    e.preventDefault();
     var nameField = document.myForm.name;
     var usernameField = document.myForm.username;
     var mailField = document.myForm.mail;
@@ -747,19 +782,15 @@ function formValidation() {
 
     verifyInput(nameField.value, 'error_name');
     verifyInput(usernameField.value, 'error_username');
-    verifyInput(mailField.value, 'error_mail');
     verifyInput(descriptionField.value, 'error_description');
-    verifyPassword(pwd1.value, 'error_pwd1');
-    verifyInput(pwd2.value, 'error_pwd2');
-
-    if (pwd1.value !== pwd2.value) {
-        document.getElementById("error_pwd2").innerHTML = "Passwords Do Not Match";
-    } else {
-        document.getElementById("error_pwd2").innerHTML = "ok";
-    }
+    verifyPassword(pwd1.value, pwd2.value, 'error_pwd1', 'error_pwd2');
+    verifyMail(mailField.value, 'error_mail');
+    verifyStatus(document.myForm, "error_status");
+    verifyGender(document.myForm, "error_gender");
 }
 
 var submitBtn = document.getElementById('submitBtn');
+document.myForm.addEventListener('submit', formValidation);
 
 submitBtn.addEventListener('click', formValidation);
 

@@ -11,7 +11,7 @@
     <div class="row">
       <div class="col-lg-12">
 
-        <form name="myForm">
+        <form name="myForm" id="myForm">
           <div class="formField">
             <label for="name">Name:</label>
             <input type="text" class="formInput" id="name" name="name" >
@@ -53,50 +53,54 @@
 
           <div class="checkbox">
             <label>
-              <input type="checkbox"> Female</label>
+              <input type="checkbox" name="gender"> Female</label>
           </div>
           <div class="checkbox">
             <label>
-              <input type="checkbox"> Male</label>
+              <input type="checkbox" name="gender"> Male</label>
           </div>
+          <span id="error_gender"> </span>
+          
 
           <label for="socialWorkStatus">Work and social status: </label>
           <div class="checkbox">
               <label>
-                <input type="checkbox"> Unemployed</label>
+                <input type="checkbox" name="status"> Unemployed</label>
             </div>
             <div class="checkbox">
                 <label>
-                  <input type="checkbox"> Employed</label>
+                  <input type="checkbox"  name="status"> Employed</label>
               </div>
             <div class="checkbox">
               <label>
-                <input type="checkbox"> Looking for work</label>
+                <input type="checkbox"  name="status"> Looking for work</label>
             </div>
            
               <div class="checkbox">
                 <label>
-                  <input type="checkbox"> Living with my mother</label>
+                  <input type="checkbox"  name="status"> Living with my mother</label>
               </div>
               <div class="checkbox">
                   <label>
-                    <input type="checkbox"> Couch potato</label>
+                    <input type="checkbox"  name="status"> Couch potato</label>
                 </div>
                 <div class="checkbox">
                     <label>
-                      <input type="checkbox"> Employed for a short period</label>
+                      <input type="checkbox"  name="status"> Employed for a short period</label>
                   </div>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox">Employed for a long time</label>
+                    <input type="checkbox" name="status">Employed for a long time</label>
                 </div>
                
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox">Self employed</label>
+                      <input type="checkbox" name="status">Self employed</label>
                   </div>
+            <span id="error_status"> </span>
+                  
 
-          <button type="button"  class="btn btn-default" id="submitBtn">Submit</button>
+          <button type="submit"   id="submitBtn">Submit</button>
         </form>
 
 

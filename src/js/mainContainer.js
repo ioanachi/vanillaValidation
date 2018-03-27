@@ -1,54 +1,100 @@
 function verifyInput(param, spanId) {
     if (param == "") {
-        console.log("intra in if");
 
         document.getElementById(spanId).innerHTML = "This field is required";
-        document.getElementById(spanId).style.color = "red";
-    }else{
-        document.getElementById(spanId).innerHTML = "ok";
+        return false;
         
+    } else {
+        document.getElementById(spanId).innerHTML = " ";
+        return true;
+        
+
     }
 }
 
 
 
-function verifyPassword(pass, spanId) {
-    var pattern1 = /[0-9]/;
-    var pattern2 = /[a-z]/;
-    var pattern3 = /[A-Z]/;
-    var pattern4 = /.*[!@#$%^&*() =+_-]/;
+function verifyPassword(pass, pass2, spanId, spanId2) {
+    var pattern = /(?=(.*[A-Z]){3,})(?=(.*[a-z]){1,})(?=(.*[0-9]){2,})(?=(.*[``!@#$%^&*\-_=+'\/.,]){2}){8,}/;
+
 
     if (pass == "") {
         document.getElementById(spanId).innerHTML = "You forgot the password";
-    }
-    else if (pass.length < 8) {
-        document.getElementById(spanId).innerHTML = "Password must have minimum 8 characters";
+        
+    } else if (pattern.test(pass) != true) {
+        document.getElementById(spanId).innerHTML = "Password must have a minimum of 8 characters 3 uppercase,1 lowercase, 2 numbers and 3 special characters";
         // The test() method tests for a match in a string.
-    } else if (pattern1.test(pass) != true) {
-        document.getElementById(spanId).innerHTML = "Password must have at least one number";
-    } else if (pattern1.test(pass) != true) {
-        document.getElementById(spanId).innerHTML = "Password must have at least one number";
-    } else if (pattern3.test(pass) != true) {
-        document.getElementById(spanId).innerHTML = "Password must have at least one uppercase letter";
-    } else if (pattern2.test(pass) != true) {
-        document.getElementById(spanId).innerHTML = "Password must have at least one uppercase letter";
-    } else if (pattern4.test(pass) != true) {
-        document.getElementById(spanId).innerHTML = "Password must have at least one special character";
-    }else{
-        document.getElementById(spanId).innerHTML = "ok";
         
-    }
-    if(document.getElementById(spanId).innerHTML !="" ){
-        document.getElementById(spanId).style.color = "red";
+    } else {
+        document.getElementById(spanId).innerHTML = " ";
         
-    }
+    };
+
+
+    if (pass !== pass2) {
+        document.getElementById(spanId2).innerHTML = "Passwords Do Not Match"
+        console.log("intraaaaaa");
+        
+    } else if ((pass != "") && (pass === pass2)) {
+        document.getElementById(spanId2).innerHTML = " "
+        return true;
+
+    };
+
 }
-// function verifyMail(mail,spanId ){
-
-// }
 
 
-function formValidation() {
+
+function verifyMail(mail, spanId) {
+    var patternMail = /\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+    if (mail == "") {
+        document.getElementById(spanId).innerHTML = "Email adress is necesarry";
+    } else if (patternMail.test(mail) != true) {
+        document.getElementById(spanId).innerHTML = "Email adress must have a @ and .";
+        return false
+    } else {
+        document.getElementById(spanId).innerHTML = " ";
+        return true
+    }
+
+
+}
+function verifyStatus(statusReference, spanId) {
+    var arr = statusReference['status'];
+    var flag = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (statusReference['status'][i].checked) {
+            flag++;
+        }
+    }
+    if (flag != 1) {
+        document.getElementById(spanId).innerHTML = "You must check one and only one status!";
+        return false;
+    }
+    document.getElementById(spanId).innerHTML = " ";
+    return true;
+};
+
+function verifyGender(genderBox, spanId) {
+    console.log(genderBox["gender"], "gender['gender']");
+    var arr = genderBox["gender"];
+    var flag = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (genderBox["gender"][i].checked) {
+            flag++;
+        }
+    }
+    if (flag != 1) {
+        document.getElementById(spanId).innerHTML = "You must check one and only one gender!";
+        return false;
+    }
+    document.getElementById(spanId).innerHTML = "";
+    return true;
+};
+
+function formValidation(e) {
+    e.preventDefault();
     var nameField = document.myForm.name;
     var usernameField = document.myForm.username;
     var mailField = document.myForm.mail;
@@ -59,19 +105,14 @@ function formValidation() {
 
     verifyInput(nameField.value, 'error_name');
     verifyInput(usernameField.value, 'error_username');
-    verifyInput(mailField.value, 'error_mail');
     verifyInput(descriptionField.value, 'error_description');
-    verifyPassword(pwd1.value, 'error_pwd1');
-    verifyInput(pwd2.value, 'error_pwd2');
-
-    if(pwd1.value!==pwd2.value) {
-		document.getElementById("error_pwd2").innerHTML="Passwords Do Not Match"
-	}else{
-		document.getElementById("error_pwd2").innerHTML="ok"
-
-    }
+    verifyPassword(pwd1.value, pwd2.value, 'error_pwd1', 'error_pwd2');
+    verifyMail(mailField.value, 'error_mail');
+    verifyStatus(document.myForm, "error_status");
+    verifyGender(document.myForm, "error_gender");
 }
 
 var submitBtn = document.getElementById('submitBtn');
+document.myForm.addEventListener('submit', formValidation);
 
-submitBtn.addEventListener('click', formValidation)
+submitBtn.addEventListener('click', formValidation);
