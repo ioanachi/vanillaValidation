@@ -695,7 +695,6 @@ __webpack_require__(16);
 
 function verifyInput(param, spanId) {
     if (param == "") {
-
         document.getElementById(spanId).innerHTML = "This field is required";
         return false;
     } else {
@@ -703,10 +702,8 @@ function verifyInput(param, spanId) {
         return true;
     }
 }
-
 function verifyPassword(pass, pass2, spanId, spanId2) {
     var pattern = /(?=(.*[A-Z]){3,})(?=(.*[a-z]){1,})(?=(.*[0-9]){2,})(?=(.*[``!@#$%^&*\-_=+'\/.,]){2}){8,}/;
-
     if (pass == "") {
         document.getElementById(spanId).innerHTML = "You forgot the password";
     } else if (pattern.test(pass) != true) {
@@ -715,19 +712,15 @@ function verifyPassword(pass, pass2, spanId, spanId2) {
     } else {
         document.getElementById(spanId).innerHTML = " ";
     };
-
     if (pass !== pass2) {
         document.getElementById(spanId2).innerHTML = "Passwords Do Not Match";
-        console.log("intraaaaaa");
     } else if (pass != "" && pass === pass2) {
         document.getElementById(spanId2).innerHTML = " ";
         return true;
     };
 }
-
 function verifyMail(mail, spanId) {
     var patternMail = /\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-
     if (mail == "") {
         document.getElementById(spanId).innerHTML = "Email adress is necesarry";
     } else if (patternMail.test(mail) != true) {
@@ -753,9 +746,7 @@ function verifyStatus(statusReference, spanId) {
     document.getElementById(spanId).innerHTML = " ";
     return true;
 };
-
 function verifyGender(genderBox, spanId) {
-    console.log(genderBox["gender"], "gender['gender']");
     var arr = genderBox["gender"];
     var flag = 0;
     for (var i = 0; i < arr.length; i++) {
@@ -770,7 +761,6 @@ function verifyGender(genderBox, spanId) {
     document.getElementById(spanId).innerHTML = "";
     return true;
 };
-
 function formValidation(e) {
     e.preventDefault();
     var nameField = document.myForm.name;
@@ -779,7 +769,6 @@ function formValidation(e) {
     var descriptionField = document.myForm.description;
     var pwd1 = document.getElementById('pwd1');
     var pwd2 = document.getElementById('pwd2');
-
     verifyInput(nameField.value, 'error_name');
     verifyInput(usernameField.value, 'error_username');
     verifyInput(descriptionField.value, 'error_description');
@@ -788,10 +777,8 @@ function formValidation(e) {
     verifyStatus(document.myForm, "error_status");
     verifyGender(document.myForm, "error_gender");
 }
-
 var submitBtn = document.getElementById('submitBtn');
 document.myForm.addEventListener('submit', formValidation);
-
 submitBtn.addEventListener('click', formValidation);
 
 /***/ })
